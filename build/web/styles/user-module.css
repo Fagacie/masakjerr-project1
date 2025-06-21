@@ -1,0 +1,175 @@
+/* user-module.css - Modern, clean styles for login, register, and profile pages */
+
+:root {
+    --primary: #232946;
+    --accent: #3b82f6;
+    --bg: #f4f6fa;
+    --card-bg: #fff;
+    --border: #d1d5db;
+    --input-bg: #f7fafc;
+    --input-border: #bfc9d9;
+    --input-focus: #3b82f6;
+}
+body {
+    background: linear-gradient(120deg, #f4f6fa 0%, #e0e7ef 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(35,41,70,0.10);
+    padding: 38px 32px 32px 32px;
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.user-card h2 {
+    /* Only style for register/profile, not login */
+}
+.user-form-group {
+    margin-bottom: 18px;
+}
+.user-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-weight: 500;
+}
+.user-form-group input[type="text"],
+.user-form-group input[type="email"],
+.user-form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1.5px solid var(--input-border);
+    border-radius: 6px;
+    background: var(--input-bg);
+    font-size: 1em;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.user-form-group input:focus {
+    border-color: var(--input-focus);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.10);
+}
+.user-form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+.user-form-actions button, .user-form-actions a {
+    padding: 12px 0;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #3b82f6 60%, #232946 100%);
+    color: #fff;
+    font-size: 1.08em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+    text-align: center;
+    text-decoration: none;
+}
+.user-form-actions button:hover, .user-form-actions a:hover {
+    background: linear-gradient(90deg, #232946 60%, #3b82f6 100%);
+    color: #fff;
+}
+.user-card .form-message {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1em;
+    color: #ef4444;
+}
+.user-profile-info {
+    background: var(--input-bg);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 1.08em;
+    box-shadow: 0 1px 4px rgba(35,41,70,0.06);
+}
+.profile-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    min-height: 100vh;
+    background: none;
+}
+.profile-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    margin-top: 60px;
+}
+.profile-card-right {
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(35,41,70,0.13);
+    padding: 56px 48px 44px 48px;
+    max-width: 540px;
+    width: 100%;
+    margin: 60px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 420px;
+}
+.profile-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+.profile-visual-text {
+    display: none;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    background: none;
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    transition: color 0.18s;
+    cursor: pointer;
+}
+.back-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .profile-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .profile-card-left {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+    .profile-card-right {
+        padding: 18px 6px 18px 6px;
+        max-width: 98vw;
+        min-height: 320px;
+    }
+}
+@media (max-width: 600px) {
+    .user-card {
+        /* Only style for register/profile, not login */
+    }
+}

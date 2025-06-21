@@ -1,0 +1,88 @@
+/* Rating form and average rating styles */
+.recipe-card .rating-form {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.rating-form select {
+    padding: 0.25rem 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    background-color: #fff8f1;
+    color: #333;
+}
+
+.rating-form button.rate-btn {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.rating-form button.rate-btn:hover {
+    background-color: #d35400;
+}
+
+/* Displayed average rating text */
+.average-rating {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #444;
+    margin-top: 0.5rem;
+    background: #fff6ea;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Recipe card action buttons */
+.edit-btn {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 0.45rem 1.1rem;
+    font-size: 1em;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 1px 4px rgba(59,130,246,0.08);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.edit-btn:hover {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.13);
+}
+
+.delete-btn {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 0.45rem 1.1rem;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 1px 4px rgba(230,126,34,0.08);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.delete-btn:hover {
+    background: #cf711f;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(230,126,34,0.13);
+}
