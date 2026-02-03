@@ -46,7 +46,8 @@ body {
 }
 .user-form-group input[type="text"],
 .user-form-group input[type="email"],
-.user-form-group input[type="password"] {
+.user-form-group input[type="password"],
+.user-form-group textarea {
     width: 100%;
     padding: 12px 10px;
     border: 1.5px solid var(--input-border);
@@ -54,8 +55,10 @@ body {
     background: var(--input-bg);
     font-size: 1em;
     transition: border 0.2s, box-shadow 0.2s;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
-.user-form-group input:focus {
+.user-form-group input:focus,
+.user-form-group textarea:focus {
     border-color: var(--input-focus);
     outline: none;
     box-shadow: 0 0 0 2px rgba(59,130,246,0.10);
