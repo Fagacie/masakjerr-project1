@@ -55,7 +55,6 @@ body {
     background: var(--input-bg);
     font-size: 1em;
     transition: border 0.2s, box-shadow 0.2s;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 .user-form-group input:focus,
 .user-form-group textarea:focus {
