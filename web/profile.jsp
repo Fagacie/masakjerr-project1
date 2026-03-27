@@ -57,6 +57,20 @@
                 <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" value="<%= userProfile.getLastName() != null ? userProfile.getLastName() : "" %>">
             </div>
+            <div class="user-form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="4"><%
+                    String bioValue = userProfile.getBio();
+                    if (bioValue != null) {
+                        out.print(bioValue
+                            .replace("&", "&amp;")
+                            .replace("<", "&lt;")
+                            .replace(">", "&gt;")
+                            .replace("\"", "&quot;")
+                            .replace("'", "&#39;"));
+                    }
+                %></textarea>
+            </div>
             <div class="user-form-actions">
                 <button type="submit">Update Profile</button>
                 <% if (userProfile.getRole() != null && "Admin".equals(userProfile.getRole())) { %>
